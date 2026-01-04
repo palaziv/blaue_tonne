@@ -34,6 +34,18 @@
             color: #333;
             margin-bottom: 10px;
             font-size: 28px;
+            line-height: 1.3;
+            word-wrap: break-word;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 22px;
+            }
+            
+            .container {
+                padding: 30px 20px;
+            }
         }
         
         .subtitle {
@@ -146,6 +158,10 @@
         </div>
         
         <button onclick="generateCalendar()">Download</button>
+        
+        <div class="info">
+            Wähle deine bevorzugte Erinnerungszeit und klicke auf den Button, um eine Kalenderdatei herunterzuladen. Importiere sie anschließend in deinen Kalender.
+        </div>
     </div>
 
     <script>
@@ -194,7 +210,7 @@
                 icsContent += `UID:${uid}\r\n`;
                 icsContent += `DTSTAMP:${formatDate(new Date())}\r\n`;
                 icsContent += `DTSTART:${dtstart}\r\n`;
-                icsContent += `SUMMARY:🗑️ Blaue Tonne\r\n`;
+                icsContent += `SUMMARY:Blaue Tonne\r\n`;
                 icsContent += `DESCRIPTION:Blaue Tonne wird morgen entleert (${dateStr}.2026)\r\n`;
                 icsContent += 'BEGIN:VALARM\r\n';
                 icsContent += 'TRIGGER:PT0M\r\n';
