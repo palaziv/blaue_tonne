@@ -166,7 +166,7 @@
         <button onclick="generateCalendar()">Download</button>
         
         <div class="info">
-            💡 Wähle deine bevorzugte Erinnerungszeit und klicke auf den Button, um eine Kalenderdatei herunterzuladen. Importiere sie in deine Kalender-App!
+            Wähle deine bevorzugte Erinnerungszeit und klicke auf den Button, um eine Kalenderdatei herunterzuladen.
         </div>
     </div>
 
@@ -216,7 +216,7 @@
                 icsContent += `UID:${uid}\r\n`;
                 icsContent += `DTSTAMP:${formatDate(new Date())}\r\n`;
                 icsContent += `DTSTART:${dtstart}\r\n`;
-                icsContent += `SUMMARY:🗑️ Blaue Tonne\r\n`;
+                icsContent += `SUMMARY:Blaue Tonne\r\n`;
                 icsContent += `DESCRIPTION:Blaue Tonne wird morgen entleert (${dateStr}.2026)\r\n`;
                 icsContent += 'BEGIN:VALARM\r\n';
                 icsContent += 'TRIGGER:PT0M\r\n';
